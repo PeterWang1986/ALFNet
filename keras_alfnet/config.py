@@ -12,7 +12,8 @@ class Config:
 		# setting for network architechture
 		# self.network = 'resnet50' # or 'mobilenet'
 		self.network = 'mobilenet' # or 'mobilenet'
-		self.steps = 1  # optionally, ALF steps can be 1,2,3,...
+		# self.steps = 1  # optionally, ALF steps can be 1,2,3,...
+		self.steps = 2  # optionally, ALF steps can be 1,2,3,...
 
 		# setting for data augmentation
 		self.use_horizontal_flips = True

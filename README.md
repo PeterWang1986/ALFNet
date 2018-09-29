@@ -1,6 +1,18 @@
 # Learning Efficient Single-stage Pedestrian Detectors by Asymptotic Localization Fitting
 Keras implementation of [ALFNet](./docs/2018ECCV-ALFNet.pdf) accepted in ECCV 2018.
 
+### Update
+did some changes for test this work on my mac.
+1. add test_model_with_input_image() in model_2step.py for opencv image input(return bbx & scores)
+2. use py_cpu_nms instead of cpu_nms & gpu_nms
+3. add my own iou function
+4. refactoring the format of some files
+
+And here I used one image with shape (1330, 1330, 3) to test, it takes about 186 seconds,
+I'm not sure is there any mistake I did(just call ./test.py), :(
+
+![img02](./data/street.jpg)
+
 ## Introduction
 This paper is a step forward pedestrian detection for both speed and accuracy. Specifically, a structurally simple but effective module called Asymptotic Localization Fitting (ALF) is proposed, which stacks a series of predictors to directly evolve the default anchor boxes step by step into improving detection results. As a result, during training the latter predictors enjoy more and better-quality positive samples, meanwhile harder negatives could be mined with increasing IoU thresholds. On top of this, an efficient single-stage pedestrian detection architecture (denoted as ALFNet) is designed, achieving state-of-the-art performance on CityPersons and Caltech. For more details, please refer to our [paper](./docs/2018ECCV-ALFNet.pdf).
 
